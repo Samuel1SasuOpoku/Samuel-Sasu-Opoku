@@ -9,12 +9,18 @@
 <body>
 
 <nav>
+
+<button id="menuButton" onclick="toggleMenu()">MENU</button>
+
+<div id="menuLinks">
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#services">Services</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
+</div>
+
 </nav>
 
 <section id="home">
@@ -28,9 +34,7 @@
         <div class="hero-text">
             <h1>Samuel Sasu Opoku</h1>
 
-            <p class="typing">
-                Beginner Web Developer | HTML & CSS Learner
-            </p>
+            <p class="typing" id="typingText"></p>
 
             <p>
                 I am a passionate beginner web developer from Ghana, focused on building websites, improving my programming skills, and growing into a professional software developer.
@@ -45,11 +49,10 @@
     </div>
 
 </section>
-</section>
 <section id="about">
     <h2>About Me</h2>
     <div class="about-box">
-    <p>
+    
         Hello! My name is Samuel Sasu Opoku. I am a beginner web developer from Ghana. I enjoy learning HTML and CSS, and I am working towards becoming a professional software developer.
     </p>
 </div>
@@ -64,10 +67,20 @@
 <section id="skills">
     <h2>My Skills</h2>
 
-    <div class="skill-box">HTML</div>
-    <div class="skill-box">CSS</div>
-    <div class="skill-box">JavaScript</div>
-</section>
+    <div class="skill-box">
+    <h3>HTML</h3>
+    <p>Building the structure and content of websites.</p>
+</div>
+
+<div class="skill-box">
+    <h3>CSS</h3>
+    <p>Designing and styling websites to make them attractive and responsive.</p>
+</div>
+
+<div class="skill-box">
+    <h3>JavaScript</h3>
+    <p>Adding interactions and making websites dynamic.</p>
+</div>
 <section id="services">
     <h2>My Services</h2>
 
@@ -92,7 +105,7 @@
     <span>CSS</span>
 </div>
 
-    <a href="#" class="project-btn">View Project</a>
+    <a href="https://samuel1sasuopoku.github.io/samuel-portfolio/" target="_blank" class="project-btn">View Project</a>
 </div>
 <div class="project">
     <h3>Personal Portfolio Website</h3>
@@ -113,6 +126,9 @@
     <p>Email: opokusamuelsasu@gmail.com</p>
     <p>Phone: +233 599629075</p>
 <form action="https://formspree.io/f/mgogyjar" method="POST">
+<a href="Samuel_Sasu_Opoku_CV.pdf" target="_blank">
+    <button>View My CV</button>
+</a>
 
     <input type="text" placeholder="Your Name">
 
@@ -129,6 +145,7 @@
 
     <button>Email Me</button>
 </section>
+<button onclick="backToTop()">Back to Top</button>
 
  
 <footer>
@@ -140,6 +157,12 @@
         <a href="https://www.linkedin.com/in/samuel-sasu-opoku-597786421" target="_blank">LinkedIn</a>
     </p>
 </footer>
+<h2 id="message">Welcome to my portfolio!</h2>
+
+<button onclick="changeMessage()">Click Me</button>
+<button onclick="changeColor()">Change Background</button>
+<button id="darkButton" onclick="darkMode()">Dark Mode</button>
+<script src="script.js"></script>
 </body>
 
 </html>
