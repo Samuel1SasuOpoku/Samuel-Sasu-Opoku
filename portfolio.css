@@ -1,0 +1,355 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    background-color: navy;
+    padding: 15px 30px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+h1 {
+    color: navy;
+    font-size: 42px;
+}
+
+button {
+    background-color: navy;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor : pointer;
+    transition : 0.3s;
+}
+button:hover {
+    background-color: green;
+    transform: scale(1.05);
+}
+.profile {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid navy;
+    box-shadow: 0 0 25px rgba(0, 0, 128, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.profile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px rgba(0, 0, 128, 0.5);
+}
+#about {
+    background-color: white;
+    padding: 50px 20px;
+}
+
+#about h2 {
+    color: navy;
+    font-size: 32px;
+}
+
+#about p {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: auto;
+}
+#skills {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.skill-box {
+    display: inline-block;
+    background-color: navy;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 10px;
+}
+#projects {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.project {
+    background-color: white;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px gray;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px gray;
+}
+
+
+.project h3 {
+    color: navy;
+}
+#contact {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f0f8ff;
+}
+
+#contact h2 {
+    color: navy;
+}
+
+#contact p {
+    font-size: 18px;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+nav a:hover {
+    color: yellow;
+    text-decoration: underline;
+}
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .profile {
+        width: 140px;
+        height: 140px;
+    }
+
+    .project {
+        width: 90%;
+    }
+}
+footer {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+#contact a {
+    color: navy;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    color: green;
+    text-decoration: underline;
+}
+.typing {
+    font-size: 22px;
+    color: navy;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid navy;
+    width: fit-content;
+    margin: auto;
+    animation: typing 3s steps(25), blink 0.5s infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+#goal {
+    background-color: white;
+    padding: 50px 20px;
+}
+
+#goal h2 {
+    color: navy;
+    font-size: 32px;
+}
+
+#goal p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+}
+.about-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: auto;
+}
+#services {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.service-box {
+    display: inline-block;
+    background-color: white;
+    width: 250px;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px gray;
+}
+
+.service-box h3 {
+    color: navy;
+}
+form {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+textarea {
+    height: 120px;
+}
+form {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 16px;
+}
+
+textarea {
+    height: 120px;
+}
+.project-btn {
+    display: inline-block;
+    background-color: navy;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.project-btn:hover {
+    background-color: green;
+}
+.tags span {
+    display: inline-block;
+    background-color: navy;
+    color: white;
+    padding: 5px 12px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    color: navy;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+footer {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #ffd700;
+}
