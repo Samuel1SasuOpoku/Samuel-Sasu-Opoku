@@ -5,9 +5,14 @@
 <meta charset="UTF-8">
     <title>Samuel's Portfolio</title>
     <link rel="stylesheet" href="portfolio.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="icon" type="image/png" href="favicon.png">
 </head>
 
 <body>
+<div id="loader">
+    <div class="spinner"></div>
+</div>
 
 <nav>
 
@@ -21,6 +26,8 @@
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
 </div>
+
+<button id="themeToggle" onclick="darkMode()">🌙</button>
 
 </nav>
 
@@ -41,14 +48,59 @@
                 I am a passionate beginner web developer from Ghana, focused on building websites, improving my programming skills, and growing into a professional software developer.
             </p>
 
-            <a href="#contact">
-                <button>Hire Me</button>
-            </a>
+            <button onclick="openPopup()">Hire Me</button>
+            
 
         </div>
 
     </div>
 
+</section>
+<section id="stats">
+    <div class="stat-box">
+        <h2 id="projectsCount">0</h2>
+        <p>Projects Completed</p>
+    </div>
+
+    <div class="stat-box">
+        <h2 id="certificateCount">0</h2>
+        <p>Certificate</p>
+    </div>
+
+    <div class="stat-box">
+        <h2 id="yearCount">0</h2>
+        <p>Started Web Development</p>
+    </div>
+
+    <div class="stat-box">
+        <h2 id="passionCount">0</h2>
+        <p>Passion for Learning</p>
+    </div>
+</section>
+<section id="stats">
+    <div class="stats-container">
+
+        <div class="stat-box">
+            <h2>2+</h2>
+            <p>Projects Completed</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>3</h2>
+            <p>Technologies Learned</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>100%</h2>
+            <p>Dedication</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>2026</h2>
+            <p>Started My Journey</p>
+        </div>
+
+    </div>
 </section>
 <section id="about">
     <h2>About Me</h2>
@@ -165,6 +217,19 @@
         <p>I help improve and update existing websites.</p>
     </div>
 </section>
+<section id="resume">
+    <h2>My Resume</h2>
+
+    <div class="resume-box">
+        <p>
+            Download my CV to learn more about my education, skills, experience, and projects.
+        </p>
+
+        <a href="Samuel_Sasu_Opoku_CV.pdf" download class="resume-btn">
+            Download CV
+        </a>
+    </div>
+</section>
 <section id="projects">
     <h2>My Projects</h2>
 
@@ -201,8 +266,8 @@
     <p>Email: opokusamuelsasu@gmail.com</p>
     <p>Phone: +233 599629075</p>
 <form action="https://formspree.io/f/mgogyjar" method="POST">
-<a href="Samuel_Sasu_Opoku_CV.pdf" target="_blank">
-    <button>View My CV</button>
+<a href="Samuel_Sasu_Opoku_CV.pdf" download>
+    <button>Download CV</button>
 </a>
 
     <input type="text" placeholder="Your Name">
@@ -215,29 +280,58 @@
     <button type="submit">Send Message</button>
 </form>
 <p>
-    <a href="https://github.com/Samuel1SasuOpoku" target="_blank">GitHub</a> |
-    <a href="https://www.linkedin.com/in/samuel-sasu-opoku-597786421" target="_blank">LinkedIn</a>
+<div class="social-icons">
+    <a href="https://github.com/Samuel1SasuOpoku" target="_blank">
+        <i class="fab fa-github"></i>
+    </a>
 
-    <button>Email Me</button>
-</section>
+    <a href="https://www.linkedin.com/in/samuel-sasu-opoku-597786421" target="_blank">
+        <i class="fab fa-linkedin"></i>
+    </a>
+
+    <a href="mailto:opokusamuelsasu@gmail.com">
+        <i class="fas fa-envelope"></i>
+    </a>
+</div>    
+
 <button onclick="backToTop()">Back to Top</button>
 
  
 <footer>
-    <p>© 2026 Samuel Sasu Opoku. All Rights Reserved.</p>
+    <p>© <span id="year"></span> Samuel Sasu Opoku. All Rights Reserved.</p>
     <p>Built with HTML & CSS</p>
 
     <p>
-        <a href="https://github.com/Samuel1SasuOpoku" target="_blank">GitHub</a> |
+        <a href="https://github.com/Samuel1SasuOpoku" target="_blank">GitHub</a> 
         <a href="https://www.linkedin.com/in/samuel-sasu-opoku-597786421" target="_blank">LinkedIn</a>
     </p>
 </footer>
-<h2 id="message">Welcome to my portfolio!</h2>
 
-<button onclick="changeMessage()">Click Me</button>
-<button onclick="changeColor()">Change Background</button>
-<button id="darkButton" onclick="darkMode()">Dark Mode</button>
 <script src="script.js"></script>
+<div id="hirePopup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+
+        <h2>Hire Me</h2>
+
+        <p>📧 Email: opokusamuelsasu@gmail.com</p>
+        <p>📱 Phone: +233 599629075</p>
+
+        <div class="footer-icons">
+    <a href="https://github.com/Samuel1SasuOpoku" target="_blank">
+        <i class="fab fa-github"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/in/samuel-sasu-opoku-597786421" target="_blank">
+        <i class="fab fa-linkedin"></i>
+    </a>
+
+    <a href="mailto:opokusamuelsasu@gmail.com">
+        <i class="fas fa-envelope"></i>
+    </a>
+</div>
+    </div>
+</div>
 </body>
 
 </html>

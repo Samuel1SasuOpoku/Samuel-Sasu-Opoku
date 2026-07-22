@@ -10,12 +10,14 @@ function changeColor() {
 function darkMode() {
     document.body.classList.toggle("dark-mode");
 
-    let button = document.getElementById("darkButton");
+    const button = document.getElementById("themeToggle");
 
     if (document.body.classList.contains("dark-mode")) {
-        button.textContent = "Light Mode";
+        button.textContent = "☀️";
+        localStorage.setItem("theme", "dark");
     } else {
-        button.textContent = "Dark Mode";
+        button.textContent = "🌙";
+        localStorage.setItem("theme", "light");
     }
 }
 
@@ -55,3 +57,62 @@ function toggleMenu() {
         menu.style.display = "block";
     }
 }
+function animateCounter(id, target, speed) {
+    let count = 0;
+    let element = document.getElementById(id);
+
+    let timer = setInterval(function () {
+        count++;
+
+        if (id === "passionCount") {
+            element.textContent = count + "%";
+        } else if (id === "projectsCount" || id === "certificateCount") {
+            element.textContent = count + "+";
+        } else {
+            element.textContent = count;
+        }
+
+        if (count >= target) {
+            clearInterval(timer);
+        }
+    }, speed);
+}
+
+animateCounter("projectsCount", 2, 300);
+animateCounter("certificateCount", 1, 500);
+animateCounter("yearCount", 2026, 1);
+animateCounter("passionCount", 100, 20);
+window.addEventListener("load", function () {
+    document.getElementById("loader").style.display = "none";
+});
+const hiddenElements = document.querySelectorAll("section");
+
+hiddenElements.forEach((el) => {
+    el.classList.add("hidden");
+});
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+hiddenElements.forEach((el) => observer.observe(el));
+document.getElementById("year").textContent = new Date().getFullYear();
+function openPopup() {
+    document.getElementById("hirePopup").style.display = "block";
+}
+
+function closePopup() {
+    document.getElementById("hirePopup").style.display = "none";
+}
+window.onload = function () {
+    const theme = localStorage.getItem("theme");
+
+    if (theme === "dark") {
+        document.body.classList.add("dark-mode");
+        document.getElementById("themeToggle").textContent = "☀️";
+    }
+};
